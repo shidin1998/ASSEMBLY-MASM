@@ -1,0 +1,15 @@
+.model small					
+.data						;data segment begins
+	msg db 10d, 13d, "HELLO WORLD!$"	;String gets stored in msg
+
+.code				  	;code segment begins here
+	mov ax,@data		;@data holds the base address. The base address is moved to ax
+	mov ds,ax		;moves content of ax into ds
+				;data section is initialised
+	lea dx,msg		;loads effective address
+	mov ah,09h		;contents at dx is displayed
+	int 21h			; call the kernal
+	
+	mov ah,4ch		;terminate the program	
+	int 21h			; call the kernal
+end				; end of the program

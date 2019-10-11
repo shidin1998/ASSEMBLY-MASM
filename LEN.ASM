@@ -17,7 +17,8 @@ data segment
         msg4 db 10d,13d, "element found:$"
         msg5 db 10d,13d, "element not found:$"
         msg6 db 10d,13d,"position at:$"
-       
+       hhh
+       shidin 
 data ends
 assume cs:code,ds:data
 code segment
